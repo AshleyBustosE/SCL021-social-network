@@ -1,4 +1,4 @@
-import { loginWithGoogle, loginWithEmailAndPassword } from '../firebase.js';
+import { loginWithGoogle } from '../firebase.js';
 
 export const login = () => {
   const container = document.createElement('div');
