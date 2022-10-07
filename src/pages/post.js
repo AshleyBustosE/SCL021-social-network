@@ -45,7 +45,7 @@ export const post = () => {
 
   const btnSignOff1 = container.querySelector(".buttonSignOff1");
   btnSignOff1.addEventListener("click", () => {
-    signOutGoogle();
+    signOutGoogle().then((res) => {console.log(res)}).catch((error) => {console.log(error)})
     console.log("aqui estoy soy el boton");
   });
   const btnSignOff = container.querySelector(".buttonSignOff");

@@ -67,15 +67,20 @@ export const loginWithGoogle = () => {
 
 //Sign Out Google
 export const signOutGoogle = () => {
-  signOut(auth)
+  return new Promise ((resolve, reject) => {
+    signOut(auth)
     .then(() => {
       onNavigate("/");
+      resolve("Se deslogueó");
       // Sign-out successful.
     })
     .catch((error) => {
+      reject(error);
       // An error happened.
       // console.log(error.message);
     });
+  })
+  
 };
 //agregar post a la nube de firebase
 export const addPost = async () => {
